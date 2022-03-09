@@ -1,0 +1,10 @@
+  <mat-form-field appearance="fill">
+    <mat-label>Search Books</mat-label>
+    <input type="text" matInput [formControl]="searchControl" (input)="searchBooks()">
+  </mat-form-field>
+  <button mat-button class="wishlist-button">
+    <a [routerLink]="['/wishlist']" [queryParams]="{username: username}">
+      Show wishlist
+    </a>
+  </button>
+  <app-search-results [books]="booksVolumes$ | async"></app-search-results>

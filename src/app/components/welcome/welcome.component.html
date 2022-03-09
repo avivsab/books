@@ -1,0 +1,12 @@
+<div class="username-container">
+  <mat-form-field class="full-input-width" appearance="fill">
+    <mat-label>Your username</mat-label>
+    <input type="text" matInput [formControl]="username" [errorStateMatcher]="matcher"
+           (keyup.enter)="loginLibrary()">
+    <mat-hint *ngIf="username.invalid">Mandatory Field</mat-hint>
+    <mat-hint *ngIf="username.valid" class="user-valid">Press ENTER</mat-hint>
+    <mat-error *ngIf="username.hasError('required')">
+      Username is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</div>

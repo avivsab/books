@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>BOOK DESCRIPTION</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>{{data.title}}</h3>
+  <p>
+    <img src={{data.img}}>
+    {{data.description}}
+  </p>
+  <p *ngIf="!data.description">No description provided</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true">WISHLIST</button>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

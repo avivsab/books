@@ -1,0 +1,3 @@
+<div *ngIf="books" class="results-container">
+<app-book-item *ngFor="let book of books.items" [bookInfo]="book.volumeInfo"></app-book-item>
+</div>
