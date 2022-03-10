@@ -1,0 +1,14 @@
+.book-item {
+  max-width: 350px;
+  max-height: 325px;
+  min-height: 325px;
+  margin: 20px;
+  overflow: scroll;
+  img {
+    width: 50%;
+    margin: 5px;
+    @media(max-width: 789px) {
+      max-height: 160px;
+    }
+  }
+}
