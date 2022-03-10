@@ -11,7 +11,6 @@ export class LoginLibraryGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    console.log(route.queryParams);
     if (route.queryParams.hasOwnProperty('username') && route.queryParams.username) {
       return true;
     }

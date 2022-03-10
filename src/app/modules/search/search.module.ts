@@ -14,20 +14,23 @@ import { BookDescriptionComponent } from './components/book-description/book-des
 
 
 @NgModule({
-  declarations: [
-    SearchComponent,
-    SearchResultsComponent,
-    BookItemComponent,
-    BookDescriptionComponent,
-  ],
-  imports: [
-    CommonModule,
-    SearchRoutingModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDialogModule,
-  ]
+    declarations: [
+        SearchComponent,
+        SearchResultsComponent,
+        BookItemComponent,
+        BookDescriptionComponent,
+    ],
+    exports: [
+        BookItemComponent
+    ],
+    imports: [
+        CommonModule,
+        SearchRoutingModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatCardModule,
+        MatButtonModule,
+        MatDialogModule,
+    ]
 })
 export class SearchModule { }

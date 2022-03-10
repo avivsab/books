@@ -1,0 +1,10 @@
+.wishlist-container {
+  width: 100%;
+  display: flex;
+  flex-basis: 33%;
+  flex-wrap: wrap;
+  @media(max-width: 789px) {
+    display: flex;
+    flex-direction: column;
+  }
+}

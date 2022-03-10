@@ -1,1 +1,10 @@
-<p>wishlist works!</p>
+<ng-container *ngIf="wishlist.length; else noitems">
+<div class="wishlist-container">
+<app-wish-item  *ngFor="let wishItem of wishlist" [data]="wishItem"></app-wish-item>
+</div>
+</ng-container>
+<ng-template #noitems>
+  NO WISHLIST ITEMS - you can add books to the wishlist from the previous page
+</ng-template>
+
+
